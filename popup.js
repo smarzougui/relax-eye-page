@@ -51,7 +51,7 @@
              }, function (tabs) {
                  chrome.tabs.executeScript(
                      tabs[0].id, {
-                         code: 'document.body.style.color = "' + color + '";'
+                         code: 'document.body.style.color = "' + color + '";' + `for (let item of document.getElementsByTagName('p')) { item.style.color = "` + color + `"; }`
                      });
              });
          };
@@ -92,7 +92,7 @@
              }, function (tabs) {
                  chrome.tabs.executeScript(
                      tabs[0].id, {
-                         code: 'document.body.style.fontWeight = "' + weight + '";' 
+                         code: 'document.body.style.fontWeight = "' + weight + '";' + `for (let item of document.getElementsByTagName('p')) { item.style.fontWeight = "` + weight + `"; }`
                      });
              });
          };
