@@ -114,10 +114,13 @@
                  currentWindow: true
              }, function (tabs) {
 
-                console.log('rrrrrr');
+                console.log('rrrrrr'); 
                  chrome.tabs.executeScript(
                      tabs[0].id, {
-                         code: 'document.body.style.backgroundColor = "' + color + '";' +  'document.getElementsByClassName("lesson-content-container")[0].style.backgroundColor = "' + color + '";'
+                         code: 'document.body.style.backgroundColor = "' + color + '";' 
+                         +  'document.getElementsByClassName("lesson-content-container")[0].style.backgroundColor = "' + color + '";' 
+                         //+  'document.getElementsByClassName("lcf-interactive-cards")[0].style.backgroundColor = "' + color + '";'
+                         + `for (let item of document.getElementsByClassName('mask')) { item.style.backgroundColor = "` + color + `"; }`
 
                      });
              });
