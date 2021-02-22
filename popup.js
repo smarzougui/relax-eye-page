@@ -114,7 +114,6 @@
                  currentWindow: true
              }, function (tabs) {
 
-                console.log('rrrrrr'); 
                  chrome.tabs.executeScript(
                      tabs[0].id, {
                          code: 'document.body.style.backgroundColor = "' + color + '";' 
@@ -126,26 +125,6 @@
              });
          };
      });
-
-
-
-
-
-     /*
-                     // change color in action:
-                     chrome.tabs.query({
-                         active: true,
-                         currentWindow: true
-                     }, function (tabs) {
-                         chrome.tabs.executeScript(
-                             tabs[0].id, {
-                                 code: 'document.body.style.color = "' + item + '";'
-                             });
-
-                     });
-
-                     */
-
 
 
  });
